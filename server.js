@@ -48,9 +48,10 @@ var server = http.createServer(function (request, response) {
     response.statusCode = 404;
   }
 
+  //把页面里多出来的true去掉
   content = JSON.stringify(content);
   content = content.substring(0, content.length - 4);
-  //把true去掉
+  
   response.write(content);
   response.end();
 
